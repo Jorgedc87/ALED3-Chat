@@ -1,0 +1,13 @@
+@media (min-width: 992px) {
+  #intro {
+    margin-top: -1rem;
+  }
+}
+#intro {
+  margin-top: -1rem;
+  max-height: calc(100vh - 58.56px - 118.59px);
+}
+
+.navbar .nav-link {
+  color: #fff !important;
+}
