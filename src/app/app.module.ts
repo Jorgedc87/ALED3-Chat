@@ -28,6 +28,7 @@ import { ErrorComponent } from './pages/error/error.component';
 import { AboutmeComponent } from './pages/aboutme/aboutme.component';
 import { ChatComponent } from './pages/chat/chat.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     ErrorComponent,
     AboutmeComponent,
-    ChatComponent
+    ChatComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

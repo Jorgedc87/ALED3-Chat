@@ -1,8 +1,7 @@
-<section style="background-color: #eee;">
-    <div class="container py-5">
+<section class="section-chat" style="background-color: #eee;">
+    <div class="container prueba" >
   
-      <div class="d-flex justify-content-center">
-  
+      <div class="d-flex justify-content-center chat">
         <!-- <div class="col-md-6 col-lg-5 col-xl-4 mb-4 mb-md-0">
   
           <h5 class="font-weight-bold mb-3 text-center text-lg-start">Chats</h5>
@@ -126,66 +125,71 @@
         </div> -->
   
         <!-- <div class="col-md-6 col-lg-7 col-xl-8"> -->
-        <div class="" style="width: 85%;max-width: 1200px">
-  
+        <div style="width: 85%;max-width: 1200px" class="bottom-cht1">
+          <div class="chat-full mb-3" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+            <ul class="list-unstyled">
+              <li class="d-flex justify-content-between mb-4">
+                <img src="assets/images/demo/jorge.png" alt="avatar"
+                  class="rounded-circle d-flex align-self-start me-3 shadow-1-strong" width="60">
+                <div class="card">
+                  <div class="card-header d-flex justify-content-between">
+                    <p class="fw-bold mb-0 chat-msg">Jorge Calderón</p>
+                    <p class="text-muted small mb-0"><i class="far fa-clock"></i> 12 mins ago</p>
+                  </div>
+                  <div class="card-body">
+                    <p class="mb-0">
+                      Hola profe, me va a aprobar no?
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="d-flex justify-content-between mb-4">
+                <div class="card w-100">
+                  <div class="card-header d-flex justify-content-between">
+                    <p class="fw-bold mb-0 chat-msg">Ezequiel Oggioni</p>
+                    <p class="text-muted small mb-0"><i class="far fa-clock"></i> 11 mins ago</p>
+                  </div>
+                  <div class="card-body">
+                    <p class="mb-0">
+                      Obvio, tenés un 10.
+                    </p>
+                  </div>
+                </div>
+                <img src="assets/images/demo/ezequiel.jpg" alt="avatar"
+                  class="rounded-circle d-flex align-self-start ms-3 shadow-1-strong" width="60">
+              </li>
+              <li class="d-flex justify-content-between mb-4">
+                <img src="assets/images/demo/jorge.png" alt="avatar"
+                  class="rounded-circle d-flex align-self-start me-3 shadow-1-strong" width="60">
+                <div class="card">
+                  <div class="card-header d-flex justify-content-between">
+                    <p class="fw-bold mb-0 chat-msg">Jorge Calderón</p>
+                    <p class="text-muted small mb-0"><i class="far fa-clock"></i> 10 mins ago</p>
+                  </div>
+                  <div class="card-body">
+                    <p class="mb-0">
+                      Nice. Muchas gracias!
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>    
+          </div>
+        </div> 
+      </div>
+      <div class="bottom-chat bottom-cht2">
+
+        <div class="chat-snd chat-snd-grid">
           <ul class="list-unstyled">
-            <li class="d-flex justify-content-between mb-4">
-              <img src="assets/images/demo/jorge.png" alt="avatar"
-                class="rounded-circle d-flex align-self-start me-3 shadow-1-strong" width="60">
-              <div class="card">
-                <div class="card-header d-flex justify-content-between p-3">
-                  <p class="fw-bold mb-0">Jorge Calderón</p>
-                  <p class="text-muted small mb-0"><i class="far fa-clock"></i> 12 mins ago</p>
-                </div>
-                <div class="card-body">
-                  <p class="mb-0">
-                    Por qué no me hablas más?
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li class="d-flex justify-content-between mb-4">
-              <div class="card w-100">
-                <div class="card-header d-flex justify-content-between p-3">
-                  <p class="fw-bold mb-0">Maria Gabriela</p>
-                  <p class="text-muted small mb-0"><i class="far fa-clock"></i> 11 mins ago</p>
-                </div>
-                <div class="card-body">
-                  <p class="mb-0">
-                    Sabes? Ni siquiera te quiero, no eres mi amigo, te odio.
-                  </p>
-                </div>
-              </div>
-              <img src="assets/images/demo/maga.png" alt="avatar"
-                class="rounded-circle d-flex align-self-start ms-3 shadow-1-strong" width="60">
-            </li>
-            <li class="d-flex justify-content-between mb-4">
-              <img src="assets/images/demo/jorge.png" alt="avatar"
-                class="rounded-circle d-flex align-self-start me-3 shadow-1-strong" width="60">
-              <div class="card">
-                <div class="card-header d-flex justify-content-between p-3">
-                  <p class="fw-bold mb-0">Jorge Calderón</p>
-                  <p class="text-muted small mb-0"><i class="far fa-clock"></i> 10 mins ago</p>
-                </div>
-                <div class="card-body">
-                  <p class="mb-0">
-                    Oh.. bueno, así quedamos :c
-                  </p>
-                </div>
-              </div>
-            </li>
             <li class="bg-white mb-3">
               <div class="form-outline">
-                <textarea class="form-control" id="textAreaExample2" rows="4"></textarea>
+                <textarea class="form-control" id="textAreaExample2" rows="3"></textarea>
                 <label class="form-label" for="textAreaExample2">Escribe un mensaje..</label>
               </div>
             </li>
-            <button type="button" class="btn btn-info btn-rounded float-end">Enviar</button>
           </ul>
-  
+          <button type="button" class="btn btn-info btn-rounded" style="height: 40px;">Enviar</button>
         </div>
-  
       </div>
-  
     </div>
   </section>
