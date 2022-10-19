@@ -29,6 +29,8 @@ import { AboutmeComponent } from './pages/aboutme/aboutme.component';
 import { ChatComponent } from './pages/chat/chat.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +43,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
     ErrorComponent,
     AboutmeComponent,
     ChatComponent,
-    ProfileComponent
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,7 +64,9 @@ import { ProfileComponent } from './pages/profile/profile.component';
     MdbTabsModule,
     MdbTooltipModule,
     MdbValidationModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
