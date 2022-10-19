@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { UserI } from 'src/app/interfaces/user';
-import { User } from 'src/app/models/user';
 import { UsersService } from 'src/app/services/users.service';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
