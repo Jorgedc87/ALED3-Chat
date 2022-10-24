@@ -12,11 +12,12 @@ export class NavbarComponent implements OnInit {
 
   logged = 0;
   toggle = 0;
+  name: string = ''
 
   constructor(public userSer: UsersService) { }
 
   ngOnInit(){
-
+    this.name = localStorage.getItem('nameALED')
   }
 
  logout(){

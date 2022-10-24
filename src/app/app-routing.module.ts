@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
 import { AboutmeComponent } from './pages/aboutme/aboutme.component';
 import { ChatComponent } from './pages/chat/chat.component';
 import { ErrorComponent } from './pages/error/error.component';
@@ -13,7 +14,7 @@ const routes: Routes = [];
   imports: [RouterModule.forRoot([
     {path: '', component: IndexComponent},
     {path: 'inicio', component: IndexComponent},
-    {path: 'chat', component: ChatComponent},
+    {path: 'chat', component: ChatComponent, canActivate: [AuthGuard]},
     {path: 'sobre-mi', component: AboutmeComponent},
     {path: 'login', component: LoginComponent},
     {path: 'register', component: RegisterComponent},
