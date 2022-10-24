@@ -128,22 +128,22 @@
         <div style="width: 85%;max-width: 1200px" class="bottom-cht1">
           <div class="chat-full mb-3" #scrollMe [scrollTop]="scrollMe.scrollHeight">
             <ul class="list-unstyled">
-              <li class="d-flex justify-content-between mb-4">
+              <li class="d-flex mb-4" *ngFor="let mensaje of mensajes" [ngClass]="mensaje.id == userId ? 'justify-right' : 'justify-left'">
                 <img src="assets/images/demo/jorge.png" alt="avatar"
                   class="rounded-circle d-flex align-self-start me-3 shadow-1-strong" width="60">
                 <div class="card">
-                  <div class="card-header d-flex justify-content-between">
-                    <p class="fw-bold mb-0 chat-msg">Jorge Calderón</p>
+                  <div class="card-header d-flex" >
+                    <p class="fw-bold mb-0 chat-msg">{{mensaje.name}}</p>
                     <p class="text-muted small mb-0"><i class="far fa-clock"></i> 12 mins ago</p>
                   </div>
                   <div class="card-body">
                     <p class="mb-0">
-                      Hola profe, me va a aprobar no?
+                      {{mensaje.mensaje}}
                     </p>
                   </div>
                 </div>
               </li>
-              <li class="d-flex justify-content-between mb-4">
+              <!-- <li class="d-flex justify-content-between mb-4">
                 <div class="card w-100">
                   <div class="card-header d-flex justify-content-between">
                     <p class="fw-bold mb-0 chat-msg">Ezequiel Oggioni</p>
@@ -172,7 +172,7 @@
                     </p>
                   </div>
                 </div>
-              </li>
+              </li> -->
             </ul>    
           </div>
         </div> 
