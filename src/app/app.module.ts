@@ -36,6 +36,8 @@ import { ChatService } from './services/chat.service';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AgePipe } from './pipes/age.pipe';
+import { SearchPipe } from './pipes/search.pipe';
 
 
 @NgModule({
@@ -50,6 +52,8 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     AboutmeComponent,
     ChatComponent,
     ProfileComponent,
+    AgePipe,
+    SearchPipe,
   ],
   imports: [
     BrowserModule,

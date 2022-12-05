@@ -5,26 +5,23 @@
       <div class="col-lg-4">
         <div class="card mb-4">
           <div class="card-body text-center">
-            <!-- <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
-              class="rounded-circle img-fluid" style="width: 150px;"> -->
-            <h5 class="my-3">Editar Usuario</h5>
-            <p class="text-muted mb-1">Aqui podrás editar el usuario</p>
+            <h5 class="my-3">Información del usuario</h5>
+            <!-- <textarea name="" id="" cols="40" rows="5"  *ngIf="!flag"></textarea> -->
+            <p class="text-muted mb-1" *ngIf="flag">{{ user.bio }}</p>
             <div class="d-flex justify-content-center mb-2">
-              <!-- <button type="button" class="btn btn-primary">Follow</button>
-              <button type="button" class="btn btn-outline-primary ms-1">Message</button> -->
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-8">
+      <div class="col-lg-8" *ngIf="flag">
         <div class="card mb-4">
           <div class="card-body">
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Full Name</p>
+                <p class="mb-0">Nombre completo</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">Johnatan Smith</p>
+                <p class="text-muted mb-0">{{ user.name }}</p>
               </div>
             </div>
             <hr>
@@ -33,41 +30,91 @@
                 <p class="mb-0">Email</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">example@example.com</p>
+                <p class="text-muted mb-0">{{ user.email }}</p>
               </div>
             </div>
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Phone</p>
+                <p class="mb-0">Nacimiento</p>
+              </div>
+              <div class="col-sm-9 row" *ngIf="user.birthday == null">
+                <input class="form-control" type="date" placeholder="Asd" style="width: 200px;"> <button class="btn btn-primary ml-2" style="width: 120px; margin-left: 10px;">Agregar</button>
+              </div>
+              <div class="col-sm-9" *ngIf="user.birthday != null">
+                <p class="text-muted mb-0">{{ user.birthday }}</p>
+              </div>
+            </div>
+            <hr *ngIf="user.birthday != null">
+            <div class="row" *ngIf="user.birthday != null">
+              <div class="col-sm-3">
+                <p class="mb-0">Edad</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">(097) 234-5678</p>
+                <p class="text-muted mb-0">{{ age }}</p>
+              </div>
+            </div>
+            <!-- <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Contraseña</p>
+              </div>
+              <div class="col-sm-9">
+                <button type="button" class="btn btn-info" (click)="changePassword()">Cambiar contraseña</button>
+              </div>
+            </div> -->
+
+          </div>
+          <button type="button" class="btn btn-primary" style="float: right;" (click)="toggleFlag()">Editar</button>
+        </div>
+      </div>
+
+
+      <form novalidate [formGroup]="form" class="col-lg-8" *ngIf="!flag">
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Nombre completo</p>
+              </div>
+              <div class="col-sm-9">
+                <input type="text" class="text-muted mb-0 form-control" value="{{ user.name }}" formControlName="name">
               </div>
             </div>
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Mobile</p>
+                <p class="mb-0">Email</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">(098) 765-4321</p>
+                <input type="email" class="text-muted mb-0 form-control" value="{{ user.email }}" formControlName="email">
+
               </div>
             </div>
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Address</p>
+                <p class="mb-0">Nacimiento</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
+                <input class="form-control" type="date" value="{{ user.birthday }}" formControlName="birthday">
+              </div>
+            </div>
+            <hr>
+            <div class="row" *ngIf="user.birthday != null">
+              <div class="col-sm-3">
+                <p class="mb-0">Edad</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ age }}</p>
               </div>
             </div>
 
           </div>
-          <button type="button" class="btn btn-primary" style="float: right;">Editar</button>
+          <button type="button" class="btn btn-success" style="float: right;" (click)="saveData()">Guardar</button>
         </div>
-      </div>
+      </form>
     </div>
+    
   </div>
 </section>

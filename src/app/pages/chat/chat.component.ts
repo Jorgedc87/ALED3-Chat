@@ -13,6 +13,7 @@ export class ChatComponent implements OnInit {
   chatArea: string = ''
   userId = localStorage.getItem('idALED')
   error = {active: false,mensaje: ""}
+  filterChat = ''
 
   constructor(public chatServ: ChatService) { }
 

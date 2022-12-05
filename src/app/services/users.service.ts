@@ -35,6 +35,11 @@ export class UsersService {
     }, 1000);
   }
 
+  updateName(name: any){
+    localStorage.setItem("nameALED", String(name))
+
+  }
+
   public auth()
   {
     this.getId()
@@ -56,6 +61,14 @@ export class UsersService {
     if(!this.nombre){
       this.nombre = localStorage.getItem("nameALED");
     }
+  }
+
+  getData(){
+    return this.http.get<User>(this.urlv1 + this.id);
+  }
+
+  editUser(user: any){
+    return this.http.put<User>(this.urlv1 + 'edit/' + localStorage.getItem("idALED"), user);
   }
 
   logout(): void{

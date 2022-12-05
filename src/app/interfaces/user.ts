@@ -3,4 +3,6 @@ export interface UserI {
   name: string
   email: string
   password: string
+  bio: string
+  birthday: Date
 }

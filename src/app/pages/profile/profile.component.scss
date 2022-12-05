@@ -1,0 +1,14 @@
+input{
+    width: 200px;
+    height: 35px;
+}
+
+p{
+    min-height: 35px;
+    display: flex;
+    align-items: center;
+}
+
+textarea{
+    max-width: 100%;
+}
